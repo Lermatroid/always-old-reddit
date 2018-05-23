@@ -1,0 +1,16 @@
+{
+  "name": "Always Old Reddit",
+  "description": "Redirect reddit.com to old.reddit.com",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+    "48": "48.png",
+   "128": "128.png" },
+  "background": {"scripts":["background.js"]},
+  "permissions": [
+    "webRequest",
+    "*://reddit.com/*",
+    "*://www.reddit.com/*",
+    "webRequestBlocking"
+  ]
+}

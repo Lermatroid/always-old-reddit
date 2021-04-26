@@ -1,7 +1,9 @@
 var host = "https://old.reddit.com/";
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
-         return {redirectUrl: host + details.url.match(/^https?:\/\/[^\/]+([\S\s]*)/)[1]};
+        if(!details.url.match(/com\/poll/)){
+            return {redirectUrl: host + details.url.match(/^https?:\/\/[^\/]+([\S\s]*)/)[1]};
+        }
     },
     {
         urls: [
